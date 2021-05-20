@@ -1,11 +1,19 @@
 {
   "name": "web-pack-intro",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "E.S.",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EStanys/WebPack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EStanys/WebPack/issues"
+  },
+  "homepage": "https://github.com/EStanys/WebPack#readme",
+  "description": ""
 }
