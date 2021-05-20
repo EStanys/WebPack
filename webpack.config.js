@@ -14,6 +14,6 @@ module.exports = {
     filename: "main.bundle.js",
     path: path.resolve(__dirname, "dist"),
   },
-  plugins: [new HtmlWebpackPlugin({ title: "This is dynamic Webpac Title" })], // const HtmlWebpackPlugin - klase -  sukursime html faila
+  plugins: [new HtmlWebpackPlugin({ template: "src/index.html", title: "This is dynamic Webpac Title" })], // const HtmlWebpackPlugin - klase -  sukursime html faila
   // sukuriam dinamiskai title. kaip objekta. ir bus html faile : <title>This is dynamic Webpac Title</title>
 };
