@@ -6,3 +6,11 @@ komanda: npx webpack --mode production
 sukompiliavimas kurimui (development mode) - rezimas kai norim matyti koda ir su juo dibti:
 npx webpack --mode development
 
+pasidarem skriptus dev build ir start
+
+norim idiegti html plugin: npm install --save-dev html-webpack-plugin
+
+susikuriam faila webpack.config.js .Cia gules visa webpack konfiguracija
+
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
