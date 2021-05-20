@@ -1,1 +1,1 @@
-(()=>{"use strict";var o;console.log("index.js"),console.log("add(1,2,3)",6),o=" nice day",console.log("I am saying"+o);console.log(" copy",{age:30,name:"Bob",gender:"male"})})();
+(()=>{var o={774:o=>{o.exports=(o,e)=>o/e}},e={};function n(r){var s=e[r];if(void 0!==s)return s.exports;var a=e[r]={exports:{}};return o[r](a,a.exports,n),a.exports}(()=>{"use strict";const o=n(774);var e;console.log("index.js"),console.log(" Devide",o(6,3)),console.log("add(1,2,4)",7),e=" nice day",console.log("I am saying"+e);console.log(" copy",{age:30,name:"Bob",gender:"male"})})()})();
