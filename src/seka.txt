@@ -1,3 +1,8 @@
 1. instaliuojam webPack: npm install webpack webpack-cli --save-dev  (cli - command line interface)
 
-touch .gitignore && echo node_modules > .gitignore - susikuriu .gitignore faila ir i gitignore irasau node_module
+2. paruosimas produkcijai - sugeneruojam optimalius failus sujungiant i viena ir pa.:
+komanda: npx webpack --mode production
+
+sukompiliavimas kurimui (development mode) - rezimas kai norim matyti koda ir su juo dibti:
+npx webpack --mode development
+
