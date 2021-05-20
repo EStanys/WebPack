@@ -12,5 +12,6 @@ norim idiegti html plugin: npm install --save-dev html-webpack-plugin
 
 susikuriam faila webpack.config.js .Cia gules visa webpack konfiguracija
 
+Norim pajungt webpacui html plugina(webpack.config.js faile):
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
