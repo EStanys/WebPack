@@ -1,4 +1,4 @@
-import "./ban.css";
+import "../banner/ban.css";
 
 export default function banner(title, btnText) {
   const section = document.createElement("section");

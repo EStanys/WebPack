@@ -1,0 +1,14 @@
+.aside {
+  border: 1px solid black;
+  width: 20%;
+  border-radius: 1em;
+  padding: 1em;
+  background-color: snow;
+  margin-top: 1em;
+}
+
+.aside button {
+  background-color: beige;
+  border-radius: 4px;
+  border: 1px solid rgb(163, 163, 137);
+}

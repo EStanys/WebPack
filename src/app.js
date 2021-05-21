@@ -1,10 +1,28 @@
 import "./css/style.css";
 import Add from "./js/Add.js";
 import Say from "./js/Say.js";
-import banner from "./banner/ban.js";
+import banner from "./components/banner/ban.js";
+import Aside from "./components/aside/Aside";
+import Modal from "./components/modal/Modal.js";
 
 const bestBanner = banner("Dynamic title", "Learn Wabpack");
 document.body.append(bestBanner);
+bestBanner.addEventListener("click", (event) => {
+  console.log("cia ", event.target.previousSibling.previousSibling.textContent);
+});
+
+const asideEl = Aside("Aside Title", "Aside Btn");
+console.log(" asideEl", asideEl);
+document.body.append(asideEl);
+
+const modal = new Modal();
+const modalEl = modal.create();
+
+document.body.append(modalEl);
+
+modalEl.addEventListener("click", (event) => {
+  event.target.attributes.class.value === "modal-wrapper" ? event.target.remove() : null;
+});
 
 //const path = require("path"); //path yra node dalykas
 //console.log(" path", path.resolve(__dirname));
