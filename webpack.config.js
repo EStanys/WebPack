@@ -14,6 +14,15 @@ module.exports = {
     filename: "main.bundle.js",
     path: path.resolve(__dirname, "dist"),
   },
+  module: {
+    // module - objektas. rules - masyvas.taisykle-objektas
+    rules: [
+      {
+        test: /\.css$/i, // pritaikom tayskle tik  failams, kurie baigiasi *.css
+        use: ["style-loader", "css-loader"], //perdarom .css failus i dist folderi. taosykle pritaiko failams nuo galo, tai pirmam pritaikys css-loader
+      },
+    ],
+  },
   plugins: [new HtmlWebpackPlugin({ template: "src/index.html", title: "This is dynamic Webpac Title" })], // const HtmlWebpackPlugin - klase -  sukursime html faila
   // sukuriam dinamiskai title. kaip objekta. ir bus html faile : <title>This is dynamic Webpac Title</title>
 };
