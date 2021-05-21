@@ -24,6 +24,7 @@ module.exports = {
   module: {
     // module - objektas. rules - masyvas.taisykle-objektas
     rules: [
+      { test: /\.(png|svg|jpg|jpeg|gif)$/i, type: "asset/resource" },
       {
         test: /\.css$/i, // pritaikom tayskle tik  failams, kurie baigiasi *.css
         // todo: production env noresime tureti MiniCssExtractPlugin

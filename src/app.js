@@ -4,6 +4,7 @@ import Say from "./js/Say.js";
 import banner from "./components/banner/ban.js";
 import Aside from "./components/aside/Aside";
 import Modal from "./components/modal/Modal.js";
+import webPackImg from "./img/img1.jpeg";
 
 const bestBanner = banner("Dynamic title", "Learn Wabpack");
 document.body.append(bestBanner);
