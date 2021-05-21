@@ -5,7 +5,7 @@
   "scripts": {
     "start": "npm install",
     "dev": "webpack",
-    "build": "webpack --mode production",
+    "build": "webpack --config webpack.prod.js",
     "serve": "webpack serve --open"
   },
   "author": "E.S.",
