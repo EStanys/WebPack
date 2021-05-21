@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm install",
-    "dev": "webpack --config webpack.dev.js",
+    "build:dev": "webpack ",
     "build": "webpack --config webpack.prod.js",
     "serve": "webpack serve --open"
   },
@@ -25,6 +25,7 @@
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.5",
     "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.6.0",
     "style-loader": "^2.0.0",
     "webpack": "^5.37.1",
     "webpack-cli": "^4.7.0",

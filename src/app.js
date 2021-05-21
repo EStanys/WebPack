@@ -1,6 +1,10 @@
 import "./css/style.css";
 import Add from "./js/Add.js";
 import Say from "./js/Say.js";
+import banner from "./banner/ban.js";
+
+const bestBanner = banner("Dynamic title", "Learn Wabpack");
+document.body.append(bestBanner);
 
 //const path = require("path"); //path yra node dalykas
 //console.log(" path", path.resolve(__dirname));

@@ -1,5 +1,6 @@
 // cia gules visa webpack konfiguracija
 
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 //norim pajungt webpacui html plugina:
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
@@ -24,7 +25,7 @@ module.exports = {
       {
         test: /\.css$/i, // pritaikom tayskle tik  failams, kurie baigiasi *.css
         // todo: production env noresime tureti MiniCssExtractPlugin
-        use: ["style-loader", "css-loader"], //perdarom .css failus i dist folderi. taosykle pritaiko failams nuo galo, tai pirmam pritaikys css-loader
+        use: [MiniCssExtractPlugin.loader, "css-loader"], //perdarom .css failus i dist folderi. taosykle pritaiko failams nuo galo, tai pirmam pritaikys css-loader
       },
       {
         test: /\.m?js$/, // ? reiksia ,kad bus priimti ir mjs ir js failai
@@ -38,6 +39,9 @@ module.exports = {
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({ template: "src/index.html", title: "This is dynamic Webpac Title" })], // const HtmlWebpackPlugin - klase -  sukursime html faila
+  plugins: [
+    new MiniCssExtractPlugin({ filename: "style.css" }),
+    new HtmlWebpackPlugin({ template: "src/index.html", title: "This is dynamic Webpac Title" }),
+  ], // const HtmlWebpackPlugin - klase -  sukursime html faila
   // sukuriam dinamiskai title. kaip objekta. ir bus html faile : <title>This is dynamic Webpac Title</title>
 };
