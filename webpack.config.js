@@ -6,6 +6,10 @@ const path = require("path");
 
 // is src paima failus(jei nekursime, pagal nutylejima index.html ima) ir sudeda i dist
 module.exports = {
+  mode: "development",
+  devServer: {
+    contentBase: "./dist",
+  },
   devtool: false, // kad kai sukompiliuos dev geriau eitu suprast kas parasyta
   // is cia viskas bus paimta
   // nurodom musu programos pagrindini js faila. is jo webpackas padarys optimalia versija
