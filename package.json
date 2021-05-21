@@ -6,7 +6,7 @@
     "start": "npm install",
     "dev": "webpack",
     "build": "webpack --mode production",
-    "server": "cd dist && live-server"
+    "serve": "webpack serve --open"
   },
   "author": "E.S.",
   "license": "ISC",

@@ -1,19 +1,19 @@
-// import "./css/style.css";
+import "./css/style.css";
+import Add from "./js/Add.js";
+import Say from "./js/Say.js";
+
+//const path = require("path"); //path yra node dalykas
+//console.log(" path", path.resolve(__dirname));
 
 const Devide = require("./js/Devide.js");
 const Multiply = require("./js/Multiply");
-console.log("index.js");
 
+console.log("index.js");
 console.log(" Devide", Devide(6, 3));
 console.log(" Multiply", Multiply(3, 6));
+console.log("add(1,2,4)", Add(1, 2, 4));
 
-// import Add from "./js/Add.js";
-// import Say from "./js/Say.js";
-// const path = require("path"); path yra node dalykas
-// console.log(" path", path.resolve(__dirname));
-
-// console.log("add(1,2,4)", Add(1, 2, 4));
-// Say(" nice day");
+Say(" nice day");
 
 const obj = {
   age: 30,
