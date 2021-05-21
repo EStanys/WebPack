@@ -2,3 +2,22 @@ body {
   background-color: aquamarine;
   color: rgb(61, 61, 61);
 }
+
+img {
+  max-width: 300px;
+  margin-top: 1em;
+}
+
+.modal-btn {
+  padding: 10px 20px;
+  margin-bottom: 1em;
+  font-size: 1rem;
+  border-radius: 8px;
+  border-color: tomato;
+  background-color: rgb(247, 147, 130);
+  cursor: pointer;
+}
+
+.modal-btn:active {
+  transform: scale(0.9);
+}

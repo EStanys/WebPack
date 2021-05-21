@@ -1,5 +1,5 @@
 // cia gules visa webpack konfiguracija
-
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 //norim pajungt webpacui html plugina:
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -22,6 +22,7 @@ module.exports = {
   module: {
     // module - objektas. rules - masyvas.taisykle-objektas
     rules: [
+      { test: /\.(png|svg|jpg|jpeg|gif)$/i, type: "asset/resource" },
       {
         test: /\.css$/i, // pritaikom tayskle tik  failams, kurie baigiasi *.css
         // todo: production env noresime tureti MiniCssExtractPlugin
@@ -40,6 +41,13 @@ module.exports = {
     ],
   },
   plugins: [
+    new ImageMinimizerPlugin({
+      filename: "images/[name].webp",
+      deleteOriginalAssets: true,
+      minimizerOptions: {
+        plugins: [["imagemin-webp"], ["imagemin-svgo"], ["gifsicle"], ["pngquant"], ["mozjpeg", { quality: 50 }]],
+      },
+    }),
     new MiniCssExtractPlugin({ filename: "style.css" }),
     new HtmlWebpackPlugin({ template: "src/index.html", title: "This is dynamic Webpac Title" }),
   ], // const HtmlWebpackPlugin - klase -  sukursime html faila
