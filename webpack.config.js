@@ -19,6 +19,7 @@ module.exports = {
     rules: [
       {
         test: /\.css$/i, // pritaikom tayskle tik  failams, kurie baigiasi *.css
+        // todo: production env noresime tureti MiniCssExtractPlugin
         use: ["style-loader", "css-loader"], //perdarom .css failus i dist folderi. taosykle pritaiko failams nuo galo, tai pirmam pritaikys css-loader
       },
     ],
