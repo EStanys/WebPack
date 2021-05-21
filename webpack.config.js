@@ -6,6 +6,7 @@ const path = require("path");
 
 // is src paima failus(jei nekursime, pagal nutylejima index.html ima) ir sudeda i dist
 module.exports = {
+  devtool: false, // kad kai sukompiliuos dev geriau eitu suprast kas parasyta
   // is cia viskas bus paimta
   // nurodom musu programos pagrindini js faila. is jo webpackas padarys optimalia versija
   entry: { main: path.resolve(__dirname, "./src/app.js") },
@@ -21,6 +22,16 @@ module.exports = {
         test: /\.css$/i, // pritaikom tayskle tik  failams, kurie baigiasi *.css
         // todo: production env noresime tureti MiniCssExtractPlugin
         use: ["style-loader", "css-loader"], //perdarom .css failus i dist folderi. taosykle pritaiko failams nuo galo, tai pirmam pritaikys css-loader
+      },
+      {
+        test: /\.m?js$/, // ? reiksia ,kad bus priimti ir mjs ir js failai
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"], // kokio senumo js norim paversti veikiancius senesnese narsyklese
+          },
+        },
       },
     ],
   },

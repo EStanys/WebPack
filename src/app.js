@@ -1,4 +1,4 @@
-import "./css/style.css";
+// import "./css/style.css";
 
 const Devide = require("./js/Devide.js");
 const Multiply = require("./js/Multiply");
