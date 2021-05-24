@@ -20,6 +20,7 @@ module.exports = {
     filename: "main.bundle.js",
     path: path.resolve(__dirname, "dist"),
     clean: true, // istrins dist failus, pries irasant naujus
+    assetModuleFilename: "images/[name][ext]", // nurodome kur bus padeti musu paveiksleliai
   },
   module: {
     // module - objektas. rules - masyvas.taisykle-objektas

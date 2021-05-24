@@ -18,6 +18,7 @@ module.exports = {
     filename: "final.bundle.js",
     path: path.resolve(__dirname, "dist"),
     clean: true, // istrins dist failus, pries irasant naujus
+    assetModuleFilename: "images/[name][ext]", // nurodome kur bus padeti musu paveiksleliai
   },
   module: {
     // module - objektas. rules - masyvas.taisykle-objektas
@@ -42,10 +43,10 @@ module.exports = {
   },
   plugins: [
     new ImageMinimizerPlugin({
-      filename: "images/[name].webp",
-      deleteOriginalAssets: true,
+      //filename: "images/[name].webp",
+      //deleteOriginalAssets: true,
       minimizerOptions: {
-        plugins: [["imagemin-webp"], ["imagemin-svgo"], ["gifsicle"], ["pngquant"], ["mozjpeg", { quality: 50 }]],
+        plugins: [["imagemin-svgo"], ["gifsicle"], ["pngquant", { quality: [0.3, 0.6] }], ["mozjpeg", { quality: 70 }]],
       },
     }),
     new MiniCssExtractPlugin({ filename: "style.css" }),

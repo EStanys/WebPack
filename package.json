@@ -6,7 +6,7 @@
     "start": "npm install",
     "build:dev": "webpack ",
     "build": "webpack --config webpack.prod.js",
-    "serve": "webpack serve --open"
+    "serve": "webpack serve"
   },
   "author": "E.S.",
   "license": "ISC",
