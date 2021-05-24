@@ -21,3 +21,10 @@ img {
 .modal-btn:active {
   transform: scale(0.9);
 }
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}

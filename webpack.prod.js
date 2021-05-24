@@ -27,7 +27,7 @@ module.exports = {
       {
         test: /\.css$/i, // pritaikom tayskle tik  failams, kurie baigiasi *.css
         // todo: production env noresime tureti MiniCssExtractPlugin
-        use: [MiniCssExtractPlugin.loader, "css-loader"], //perdarom .css failus i dist folderi. taosykle pritaiko failams nuo galo, tai pirmam pritaikys css-loader
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"], //perdarom .css failus i dist folderi. taosykle pritaiko failams nuo galo, tai pirmam pritaikys css-loader // postcss for webkit
       },
       {
         test: /\.m?js$/, // ? reiksia ,kad bus priimti ir mjs ir js failai
